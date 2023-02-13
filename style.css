@@ -169,6 +169,10 @@ textarea{
     float: left;
     width: 40%;
 }
+#company_resume, #designation_resume , #description_resume , #project_resume, #projectdescription_resume , #projectlink_resume
+{
+    margin-bottom: 3px;
+}
   
 #passingyear_resume {
     float: right;
