@@ -1,13 +1,15 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 ::-webkit-scrollbar{
     width: .5rem;
 }
 ::-webkit-scrollbar-track{
-    background-color: transparent;
+    background-color: rgb(201, 217, 83);
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -37,9 +39,11 @@ main>.left{
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
+
+
 main>.left legend{
     color: black;
-    font-weight: 600;
+    font-weight: 900;
     margin: 0.5rem 0;
 }
 main>.left fieldset{
@@ -58,6 +62,26 @@ main>.left fieldset{
     font-weight: 600;
     cursor: pointer;
 }
+
+#Button{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+  @media print {
+    #Button {
+      display: none !important;
+    }
+  }
 /* resume */
 main>.right{
     background: whitesmoke;
@@ -71,7 +95,7 @@ main>.right{
     flex-direction: column;
     gap: 1rem;
 }
-main>.right>.block1{
+main>.right>.b1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,3 +106,83 @@ main>.right>.block1{
 .print{
     display: none;
 }
+
+input, textarea{
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 4px;
+    margin-left: auto;
+    
+}
+input{
+    height: 30px;
+}
+
+textarea{
+    height: 50px;
+}
+.page{
+    display: flex;
+}
+
+#phone_resume{
+    color: rgb(0, 74, 233);
+}
+
+#name_resume{
+    text-align: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: black;
+    display: flex;
+}
+
+#github_resume , #linkedin_resume, #projectlink_resume{
+    color: rgb(0, 74, 233);
+    text-decoration: underline;
+}
+
+#email_resume{
+    color: rgb(0, 74, 233);
+}
+
+
+
+.b2 , .b3 , .b4 , .b5{
+    margin-right: auto;
+}
+
+.b5 h2{
+    margin-bottom: 10px;
+}
+
+.right h2{
+    text-decoration-line:underline;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+}
+
+#startingyear_resume {
+    float: left;
+    width: 40%;
+}
+  
+#passingyear_resume {
+    float: right;
+    width: 45%;
+}
+
+#project_resume{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#projectlink_resume{
+    margin-top: 10px;
+}
+
+
+
