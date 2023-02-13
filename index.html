@@ -10,101 +10,126 @@
 </head>
 <body>
     <main>
-        <div class="left">
+        <div class="left" id="left">
             <form>
-                <!-- Name , Email , Phone , Github , Linkedin -->
-                <label for="Name">Name:</label>
-                <input type="text" id="Name" name="Name">
-                   <br>
-                   <br>
-                <label for="Email">Email:</label>
-                <input type="text" id="Email" name="Email">
-                   <br>
-                   <br>
-                <label for="Phone">Phone:</label>
-                <input type="text" id="Phone" name="Phone">
-                   <br>
-                   <br>
-                <label for="Github">Github:</label>
-                <input type="text" id="Github" name="Github">
-                   <br>
-                   <br>
-                <label for="Linkedin">Linkedin:</label>
-                <input type="text" id="linkedin" name="Linkedin">
-                <br>
+                <div class="page">
+                    <p>Name : </p> <input type="text" id="name" placeholder=" name" >
+                </div>
+                <div class="page"><p>Email :</p> <input type="email" id="email" placeholder=" Email">
+                </div>
+                <div class="page">
+                    <p>Phone : </p><input type="text" id="Mobile" placeholder=" Phone" >
+                </div>
+                <div class="page">
+                    <p>Github : </p>  <input type="url" id="Github" placeholder=" Github">
+                </div>
+                <div class="page">
+                    <p>Linkedin : </p> <input type="url" id="linkedin" placeholder=" Linkedin">
+                </div>
                 <fieldset>
                     <legend>Education</legend>
                     <!-- Degree , College , Starting Year , Passing Year , CGPA -->
-                    <label for="Degree">Degree:</label>
-                <input type="text" id="degree" name="degree">
-                <br>
-                <label for="College">college:</label>
-                <input type="text" id="college" name="college">
-                <br>
-                <label for="Starting year">Starting year:</label>
-                <input type="text" id="starting year" name="starting year">
-                <br>
-                <label for="Passing year">Passing year:</label>
-                <input type="text" id="Passing year" name="Passing year">
-                <br>
-                <label for="CGPA">CGPA:</label>
-                <input type="text" id="CGPA" name="CGPA">
+                    <div class="page">
+                        <p>Degree : </p>
+                        <input type="text" id="degree" placeholder=" Degree" >
+                    </div>
+                    <div class="page">
+                        <p>College : </p>
+                        <input type="text" id="college" placeholder=" College" >
+                    </div>
+                    <div class="page">
+                        <p>Starting Year : </p>
+                        <input type="text" id="startingyear" placeholder=" Starting Year" >
+                    </div>
+                    <div class="page">
+                        <p>Passing Year</p>
+                        <input type="text" id="passingyear" placeholder=" Passing Year">
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Skills</legend>
                     <!-- skills -->
-                    <label for="skills">skills:</label>
-                    <textarea id="skills" name="skills" rows="5" cols="50">Eg: HTML,js</textarea>
+                    <div class="page">
+                        <p>Skills : </p> <textarea placeholder="eg. HTML, CSS" id="skills"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Projects</legend>
                     <!-- Project , Description , Link -->
-                    <label for="projects">Projects:</label>
-                    <textarea name="projects" id="projects" cols="50" rows="5">Mention your recent work</textarea>
-                    <br>
-                    <label for="Description">Description:</label>
-                    <input type="text" id="Description" name="Description">
-                    <br>
-                    <label for="link">Link:</label>
-                    <input type="text" name="link" id="link" name="link">
+                    <div class="page">
+                        <p>Project : </p><input type="text" id="project" placeholder=" Project">
+                    </div>
+                    <div class="page">
+                        <p>Description : </p> <textarea placeholder="describe...." id="projectdescription"></textarea>
+                    </div>
+                    <div class="page">
+                        <p>Link : </p> <input type="url" id="projectlink" placeholder=" Link">
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Experience</legend>
                     <!-- Company , Designation , Duration , Description -->
-                    <label for="company">Company:</label>
-                    <input type="text" id="company" name="company">
-                    <br>
-                    <label for="designation">Designation:</label>
-                    <input type="text" id="designation" name="designation">
-                    <br>
-                    <label for="duartion">Duration:</label>
-                    <input type="text" id="duration" name="duration">
-                    <br>
-                    <label for="description">Description:</label>
-                    <textarea name="description" id="description" cols="50" rows="5">describe....</textarea>
+                    <div class="page">
+                        <p>Company : </p> <input type="text" id="company" placeholder=" Company">
+                    </div>
+                    <div class="page">
+                        <p>Designation : </p> <input type="text" id="designation" placeholder=" Designation">
+                    </div>
+                    <div class="page">
+                        <p>Duration : </p> <input type="text" id="duration" placeholder=" Duration">
+                    </div>
+                    <div class="page">
+                        <p>Description : </p> <textarea id="description" placeholder="describe...."></textarea>
+                    </div>
                 </fieldset>
-                <button type="submit" class="btn">submit</button>
+                <button type="submit" class="btn" onclick="handleSubmit()">submit</button>
                 <button type="reset" class="btn">reset</button>
                 <button class="btn" onclick="handleLeft()"><<</button>
             </form>
         </div>
         <div class="right">
-            <div class="block1">
-                <!-- Name -->
-                <!--Email , Phone , Github , Linkedin  -->
+            <div class="b1">
+                <p id="name_resume"></p>                
+                <p id="email_resume"></p>
+                <p id="phone_resume"></p>
+                <a id="github_resume" src="github_resume"></a>
+                <a id="linkedin_resume" src="linkedin_resume"></a>
             </div>
-            <div class="block2">
+
+            <div class="b2">
                 <h2>Education</h2>
+                <p id="college_resume"></p>
+                <p id="degree_resume"></p>
+                <p id="startingyear_resume"></p>
+                &#8209;&#8209;&#8209;&#8209;&#8209;&#8209;
+                <p id="passingyear_resume"></p>
             </div>
-            <div class="block3">
+
+            <div class="b3">
+                <h2>Skills</h2>
+                &#8209;&#8209;&#8209;&#8209;&#8209;&#8209;
+                <p class="skills-style" id="skills_resume"></p>
             </div>
-            <div class="block4">
+
+            <div class="b4">
                 <h2>Project</h2>
+                &#8209;&#8209;&#8209;&#8209;&#8209;&#8209;
+                <p id="project_resume"></p>
+                <p id="projectdescription_resume"></p>
+                <a id="projectlink_resume" href="projectlink_resume"></a>
             </div>
-            <div class="block5">
+
+            <div class="b5">
                 <h2>Experience</h2>
+                &#8209;&#8209;&#8209;&#8209;&#8209;&#8209;
+                <p id="company-resume"></p>
+                <p id="designation_resume"></p>
+                <p id="duration_resume"></p>
+                <p id="description_resume"></p>
             </div>
-            <button class="btn print" onclick="handlePrint()">Print</button>
+            
+
+            <button id="Button" style="display:none;" onclick="handlePrint()">Print</button>
         </div>
     </main>
 
